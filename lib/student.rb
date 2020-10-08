@@ -12,7 +12,7 @@ class Student
   def self.all
     sql =
     "SELECT * FROM students"
-  
+    binding.pry 
 
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
